@@ -2,6 +2,6 @@
 #include "funcs.h"
 
 int main() {
-    std::cout << std::string removeLeadingSpaces("    test");
+    std::cout << removeLeadingSpaces("    test");
     return 0;
 }
