@@ -2,6 +2,6 @@
 #include "funcs.h"
 
 int main() {
-    std::cout << removeLeadingSpaces("    te st e ");
+    //std::cout << removeLeadingSpaces("    te st e ");
     return 0;
 }

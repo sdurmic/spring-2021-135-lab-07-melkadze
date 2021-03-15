@@ -13,3 +13,10 @@ TEST_CASE("[A: removeLeadingSpaces] Remove spaces") {
     CHECK(removeLeadingSpaces("         leading spaces and spaces") == "leading spaces and spaces");
     CHECK(removeLeadingSpaces("    leading and trailing spaces   ") == "leading and trailing spaces   ");
 }
+
+TEST_CASE("[B: countChar] Counting chars") {
+    CHECK(countChar("{{{sequential", '{') == 3);
+    CHECK(countChar("empty", '}') == 0);
+    CHECK(countChar("}}}}}", '}') == 5);
+    CHECK(countChar("{{{nonsequential{{{{{", '{') == 8);
+}
