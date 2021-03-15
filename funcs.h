@@ -1,3 +1,3 @@
 #pragma once
 
-// add prototypes here
+string removeLeadingSpaces(string line);

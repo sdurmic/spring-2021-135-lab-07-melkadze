@@ -1,9 +1,7 @@
 #include <iostream>
-
-
 #include "funcs.h"
 
-int main()
-{
-  return 0;
+int main() {
+    std::cout << std::string removeLeadingSpaces("    test");
+    return 0;
 }

@@ -1,5 +1,6 @@
 #include <iostream>
 #include "funcs.h"
 
-// add functions here
-
+std::string removeLeadingSpaces(std::string line) {
+    return "";
+}
