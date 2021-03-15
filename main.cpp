@@ -2,7 +2,10 @@
 #include "funcs.h"
 
 int main() {
-    //std::cout << removeLeadingSpaces("    te st e ");
-    std::cout << indent("int main(){\n// Hi, I'm a program!\nint x = 1; \nfor(int i = 0; i < 10; i++) {\ncout << i;\ncout << endl;\n}\n}");
+    // read the entire cin input until eos/eof
+    // instead of per line or char by using istreambuf_iterator
+    std::string input(std::istreambuf_iterator<char>(std::cin), {});
+    std::cout << style(input);
+    
     return 0;
 }

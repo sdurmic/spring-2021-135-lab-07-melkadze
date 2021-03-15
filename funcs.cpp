@@ -58,3 +58,18 @@ std::string indent(std::string input) {
     
     return output;
 }
+
+// helper function to combine all of our work
+std::string style(std::string input) {
+    std::string output = "";
+    
+    // make a stringstream to read line by line
+    std::istringstream issInput(input);
+    
+    // start by reading the input line by line, putting a newline after each
+    for (std::string line; std::getline(issInput, line); output = output + "\n") {
+        output = output + removeLeadingSpaces(line);
+    }
+    
+    return indent(output);
+}

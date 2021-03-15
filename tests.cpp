@@ -26,3 +26,9 @@ TEST_CASE("[B: indent] Indent") {
     CHECK(indent("int justnewline()") == "int justnewline()\n");
     CHECK(indent("closeandopenall{{{{{{{{{{}}}}}}}}}}") == "closeandopenall{{{{{{{{{{}}}}}}}}}}\n");
 }
+
+TEST_CASE("[B: style] Style") {
+    CHECK(style("        int main(){\n// Hi, I'm a program!\n  int x = 1; \nfor(int i = 0; i < 10; i++) {\ncout << i;\n         cout << endl;\n}\n}") == "int main(){\n\t// Hi, I'm a program!\n\tint x = 1; \n\tfor(int i = 0; i < 10; i++) {\n\t\tcout << i;\n\t\tcout << endl;\n\t}\n}\n");
+    CHECK(style("   int justnewline()") == "int justnewline()\n");
+    CHECK(style(" closeandopenall{{{{{{{{{{}}}}}}}}}}") == "closeandopenall{{{{{{{{{{}}}}}}}}}}\n");
+}
