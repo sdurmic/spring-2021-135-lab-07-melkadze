@@ -20,3 +20,9 @@ TEST_CASE("[B: countChar] Counting chars") {
     CHECK(countChar("}}}}}", '}') == 5);
     CHECK(countChar("{{{nonsequential{{{{{", '{') == 8);
 }
+
+TEST_CASE("[B: indent] Indent") {
+    CHECK(indent("int main(){\n// Hi, I'm a program!\nint x = 1; \nfor(int i = 0; i < 10; i++) {\ncout << i;\ncout << endl;\n}\n}") == "int main(){\n\t// Hi, I'm a program!\n\tint x = 1; \n\tfor(int i = 0; i < 10; i++) {\n\t\tcout << i;\n\t\tcout << endl;\n\t}\n}\n");
+    CHECK(indent("int justnewline()") == "int justnewline()\n");
+    CHECK(indent("closeandopenall{{{{{{{{{{}}}}}}}}}}") == "closeandopenall{{{{{{{{{{}}}}}}}}}}\n");
+}
