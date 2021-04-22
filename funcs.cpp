@@ -12,7 +12,7 @@ std::string removeLeadingSpaces(std::string line)
     //iterate through the loop
     for (int i = 0; i < line.length(); i++) 
     {
-        //checks if the character is leading and a space
+        //checks if the character is not leading and not a space
         if (!(leading && isspace(line[i]))) {
             output = output + line[i];
             leading = false;
