@@ -4,28 +4,33 @@
 #include <cctype>
 #include "funcs.h"
 
-std::string removeLeadingSpaces(std::string line) {
-    std::string output = "";
+std::string removeLeadingSpaces(std::string line) 
+{
+    //creates output variable
+    std::string output = ""; 
     bool leading = true;
-    
-    for (int i = 0; i < line.length(); i++) {
+    //iterate through the loop
+    for (int i = 0; i < line.length(); i++) 
+    {
+        //checks if the character is leading and a space
         if (!(leading && isspace(line[i]))) {
             output = output + line[i];
             leading = false;
         }
-    }
-    
+        //otherwise, "leading" remains true
+    }   
     return output;
 }
 
-int countChar(std::string line, char c) {
+int countChar(std::string line, char c) 
+{
+    //counts number of c (which is curly brackets in this case)
     int count = 0;
-    
-    for (int i = 0; i < line.length(); i++) {
+    for (int i = 0; i < line.length(); i++) 
+    {
         if (line[i] == c)
             count++;
-    }
-    
+    }   
     return count;
 }
 
